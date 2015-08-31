@@ -1,0 +1,33 @@
+.tableStyle {
+	width: 100%;
+	border: 1px solid #000000;
+	margin: 0px;
+	padding: 0.5em;
+}
+.tdStyle {
+	width: 50%;
+}
+.legendStyleTableTwo {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+}
+.textStyleUm {
+	background-color: #999999;
+}
+.liStyle {
+	font-style: italic;
+	background-color: #0066FF;
+}
+.liEvenLinkStyle {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.tdStyleTwo {
+	width: 33%;
+}
+.tdStyleFive {
+	width: 33%;
+	font-weight: bold;
+	font-size: large;
+	background-color: #FF0000;
+}
