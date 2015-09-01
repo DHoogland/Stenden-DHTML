@@ -153,8 +153,15 @@ h6, .h6 {
     font-size: 40px;
 }
 .blog-post-meta {
+    padding-left:5px;
     margin-bottom: 20px;
-    color: #999;
+    color: #333;
+    background-color: #999;
+}
+.dark-bg{
+    background-color: #333;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 
@@ -174,9 +181,9 @@ h6, .h6 {
 }
 
 #bx-pager{
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
-    height: 100px;
+    height: 80px;
     white-space:nowrap;
     background-color: #999;
 }
