@@ -8,7 +8,12 @@
         <script type="text/javascript">
 			//<![CDATA[
 				$(document).ready(function() {
-					//
+					$("li:even").addClass("liStyle");
+					$("li a").addClass("liEvenLinkStyle");
+					$("table").addClass("tableStyle");
+					$("em").addClass("textStyleUm");
+					$( ".tdStyleTwo:contains('5')" ).addClass("tdStyleFive");
+					$( "legend:contains('Form Two')" ).addClass("legendStyleTableTwo");
 				});
 			//]]>
 		</script>
