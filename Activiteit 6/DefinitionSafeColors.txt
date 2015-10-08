@@ -1,7 +1,7 @@
 	  var colorCodes = new Array(216);
 	  var colorNames = new Array("black",			// #000000
                                  "weak blue",			// #000033
-				 "obsure dull blue",		// #000066
+				                 "obsure dull blue",		// #000066
                                  "dark faded blue",		// #000099
                                  "dark hard blue",		// #0000cc
                                  "blue",			// #0000ff
