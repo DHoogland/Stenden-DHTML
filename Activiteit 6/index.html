@@ -4,9 +4,14 @@
     </head>
     <body>
         <div class="container">
+
             <div class="col-md-8 col-md-offset-2" id="colorPicker">
                 <h2>ColorPicker #SWAG 4000</h2>
                 <p onclick="switchMethod()">Achtergrond kleur / Tekst kleur veranderen</p>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <input type="text" name="color" class="col-md-12 form-control" id="inputColor">
+                <input type="submit" onclick='changeColor($("#inputColor").val())' class="form-control">
             </div>
             <!-- Latest compiled and minified CSS -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
