@@ -1,237 +1,43 @@
 <html>
     <head>
-        <title>Hoi</title>
+        <title>ColorPicker #SWAG 4000</title>
     </head>
     <body>
-        <script type="text/javascript">
-            var colorCodes = new Array(216);
-            var colorNames = new Array("black",			// #000000
-                    "weak blue",			// #000033
-                    "obsure dull blue",		// #000066
-                    "dark faded blue",		// #000099
-                    "dark hard blue",		// #0000cc
-                    "blue",			// #0000ff
-                    "obscure weak green",		// #003300
-                    "obscure weak cyan",		// #003333
-                    "obscure dull azure",		// #003366
-                    "dark azure-blue",		// #003399
-                    "dark blue-azure",		// #0033cc
-                    "blue-blue-azure",		// #0033ff
-                    "obscure dull green",		// #006600
-                    "obscure dull teal",		// #006633
-                    "obscure dull cyan",		// #006666
-                    "dark azure-cyan",		// #006699
-                    "dark hard azure",		// #0066cc
-                    "azure-azure-blue",		// #0066ff
-                    "dark faded green",		// #009900
-                    "dark teal-green",		// #009933
-                    "dark teal-cyan",		// #009966
-                    "dark faded cyan",		// #009999
-                    "dark cyan-azure",		// #0099cc
-                    "azure-azure-cyan",		// #0099ff
-                    "dark hard green",		// #00cc00
-                    "dark green-teal",		// #00cc33
-                    "dark hard teal",		// #00cc66
-                    "dark cyan-teal",		// #00cc99
-                    "dark hard cyan",		// #00cccc
-                    "cyan-cyan-azure",		// #00ccff
-                    "green",			// #00ff00
-                    "green-green-teal",		// #00ff33
-                    "teal-teal-green",		// #00ff66
-                    "teal-teal-cyan",		// #00ff99
-                    "cyan-cyan-teal",		// #00ffcc
-                    "cyan",			// #00ffff
-                    "obscure weak red",		// #330000
-                    "obscure weak magenta",	// #330033
-                    "obscure dull violet",		// #330066
-                    "dark violet-blue",		// #330099
-                    "dark blue-violet",		// #3300cc
-                    "blue-blue-violet",		// #3300ff
-                    "obsure weak yellow",		// #333300
-                    "obscure gray",		// #333333
-                    "dark weak blue",		// #333366
-                    "dark dull blue",		// #333399
-                    "medium faded blue",		// #3333cc
-                    "light hard blue",		// #3333ff
-                    "obscure dull spring",		// #336600
-                    "dark weak green",		// #336633
-                    "dark weak cyan",		// #336666
-                    "dark dull azure",		// #336699
-                    "medium azure-blue",		// #3366cc
-                    "light blue-azure",		// #3366ff
-                    "dark spring-green",		// #339900
-                    "dark dull green",		// #339933
-                    "dark dull teal",		// #339966
-                    "dark dull cyan",		// #339999
-                    "medium azure-cyan",		// #3399cc
-                    "light hard azure",		// #3399ff
-                    "dark green-spring",		// #33cc00
-                    "medium faded green",		// #33cc33
-                    "medium teal-green",		// #33cc66
-                    "medium teal-cyan",		// #33cc99
-                    "medium faded cyan",		// #33cccc
-                    "light cyan-azure",		// #33ccff
-                    "green-green-spring",		// #33ff00
-                    "light hard green",		// #33ff33
-                    "light green-teal",		// #33ff66
-                    "light hard teal",		// #33ff99
-                    "light cyan-teal",		// #33ffcc
-                    "light hard cyan",		// #33ffff
-                    "obscure dull red",		// #660000
-                    "obscure dull pink",		// #660033
-                    "obscure dull magenta",	// #660066
-                    "dark violet-magenta",		// #660099
-                    "dark hard violet",		// #6600cc
-                    "violet-violet-blue",		// #6600ff
-                    "obscure dull orange",		// #663300
-                    "dark weak red",		// #663333
-                    "dark weak magenta",		// #663366
-                    "dark dull violet",		// #663399
-                    "medium violet-blue",		// #6633cc
-                    "light blue-violet",		// #6633ff
-                    "obscure dull yellow",		// #666600
-                    "dark weak yellow",		// #666633
-                    "dark gray",			// #666666
-                    "medium weak blue",		// #666699
-                    "light dull blue",		// #6666cc
-                    "light faded blue",		// #6666ff
-                    "dark spring-yellow",		// #669900
-                    "dark dull spring",		// #669933
-                    "medium weak green",		// #669966
-                    "medium weak cyan",		// #669999
-                    "light dull azure",		// #6699cc
-                    "light azure-blue",		// #6699ff
-                    "dark hard spring",		// #66cc00
-                    "medium spring-green",		// #66cc33
-                    "light dull green",		// #66cc66
-                    "light dull teal",		// #66cc99
-                    "light dull cyan",		// #66cccc
-                    "light azure-cyan",		// #66ccff
-                    "spring-spring-green",		// #66ff00
-                    "light green-spring",		// #66ff33
-                    "light faded green",		// #66ff66
-                    "light teal-green",		// #66ff99
-                    "light teal-cyan",		// #66ffcc
-                    "light faded cyan",		// #66ffff
-                    "dark faded red",		// #990000
-                    "dark pink-red",		// #990033
-                    "dark pink-magenta",		// #990066
-                    "dark faded magenta",		// #990099
-                    "dark magenta violet",		// #9900cc
-                    "violet-violet-magenta",	// #9900ff
-                    "dark orange-red",		// #993300
-                    "dark dull red",		// #993333
-                    "dark dull pink",		// #993366
-                    "dark dull magenta",		// #993399
-                    "medium violet-magenta",	// #9933cc
-                    "light hard violet",		// #9933ff
-                    "dark orange-yellow",		// #996600
-                    "dark dull orange",		// #996633
-                    "medium weak red",		// #996666
-                    "medium weak magenta",		// #996699
-                    "light dull violet",		// #9966cc
-                    "light violet-blue",		// #9966ff
-                    "dark faded yellow",		// #999900
-                    "dark dull yellow",		// #999933
-                    "medium weak yellow",		// #999966
-                    "light gray",			// #999999
-                    "light weak blue",		// #9999cc
-                    "pale dull blue",		// #9999ff
-                    "dark yellow-spring",		// #99cc00
-                    "medium spring-yellow",	// #99cc33
-                    "light dull spring",		// #99cc66
-                    "light weak green",		// #99cc99
-                    "light weak cyan",		// #99cccc
-                    "pale dull azure",		// #99ccff
-                    "spring-spring-yellow",	// #99ff00
-                    "light hard spring",		// #99ff33
-                    "light spring-green",		// #99ff66
-                    "pale dull green",		// #99ff99
-                    "pale dull teal",		// #99ffcc
-                    "pale dull cyan",		// #99ffff
-                    "dark hard red",		// #cc0000
-                    "dark red-pink",		// #cc0033
-                    "dark hard pink",		// #cc0066
-                    "dark magenta-pink",		// #cc0099
-                    "dark hard magenta",		// #cc00cc
-                    "magenta-magenta-violet",	// #cc00ff
-                    "dark red-orange",		// #cc3300
-                    "medium faded red",		// #cc3333
-                    "medium pink-red",		// #cc3366
-                    "medium pink-magenta",		// #cc3399
-                    "medium faded magenta",	// #cc33cc
-                    "light magenta-violet",	// #cc33ff
-                    "dark hard orange",		// #cc6600
-                    "medium orange-red",		// #cc6633
-                    "light dull red",		// #cc6666
-                    "light dull pink",		// #cc6699
-                    "light dull magenta",		// #cc66cc
-                    "light violet-magenta",	// #cc66ff
-                    "dark yellow-orange",		// #cc9900
-                    "medium orange-yellow",	// #cc9933
-                    "light dull orange",		// #cc9966
-                    "light weak red",		// #cc9999
-                    "light weak magenta",		// #cc99cc
-                    "pale dull violet",		// #cc99ff
-                    "dark hard yellow",		// #cccc00
-                    "medium faded yellow",		// #cccc33
-                    "light dull yellow",		// #cccc66
-                    "light weak yellow",		// #cccc99
-                    "pale gray",			// #cccccc
-                    "pale weak blue",		// #ccccff
-                    "yellow-yellow-spring",	// #ccff00
-                    "light yellow-spring",		// #ccff33
-                    "light spring-yellow",		// #ccff66
-                    "pale dull spring",		// #ccff99
-                    "pale weak green",		// #ccffcc
-                    "pale weak cyan",		// #ccffff
-                    "red",				// #ff0000
-                    "red-red-pink",		// #ff0033
-                    "pink-pink-red",		// #ff0066
-                    "pink-pink-magenta",		// #ff0099
-                    "magenta-magenta-pink",	// #ff00cc
-                    "magenta",			// #ff00ff
-                    "red-red-orange",		// #ff3300
-                    "light hard red",		// #ff3333
-                    "light red-pink",		// #ff3366
-                    "light hard pink",		// #ff3399
-                    "light magenta-pink",		// #ff33cc
-                    "light hard magenta",		// #ff33ff
-                    "orange-orange-red",		// #ff6600
-                    "light red-orange",		// #ff6633
-                    "light faded red",		// #ff6666
-                    "light pink-red",		// #ff6699
-                    "light pink-magenta",		// #ff66cc
-                    "light faded magenta",		// #ff66ff
-                    "orange-orange-yellow",	// #ff9900
-                    "light hard orange",		// #ff9933
-                    "light orange-red",		// #ff9966
-                    "pale dull red",		// #ff9999
-                    "pale dull pink",		// #ff99cc
-                    "pale dull magenta",		// #ff99ff
-                    "yellow-yellow-orang",		// #ffcc00
-                    "light yellow-orange",		// #ffcc33
-                    "light orange-yellow",		// #ffcc66
-                    "pale dull orange",		// #ffcc99
-                    "pale weak red",		// #ffcccc
-                    "pale weak magenta",		// #ffccff
-                    "yellow",			// #ffff00
-                    "light hard yellow",		// #ffff33
-                    "light faded yellow",		// #ffff66
-                    "pale dull yellow",		// #ffff99
-                    "pale weak yellow",		// #ffffcc
-                    "white");			// #ffffff
-            var array = ["00", "33", "66","99","CC","FF"];
-            var i = 0;
-            for (a = 0; a < 6; a++) {
-                for (b = 0; b < 6; b++) {
-                    for (c = 0; c < 6; c++) {
-                        var color = array[a] + array[b] + array[c];
-                        console.log(color + ' ' + colorNames[i]);
-                        i++;
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2" id="colorPicker"></div>
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            <script type="text/javascript">
+                var colorCodes = new Array(216);
+                var colorNames = new Array("black","weak blue","obsure dull blue","dark faded blue","dark hard blue","blue","obscure weak green","obscure weak cyan","obscure dull azure","dark azure-blue","dark blue-azure","blue-blue-azure","obscure dull green","obscure dull teal","obscure dull cyan","dark azure-cyan","dark hard azure","azure-azure-blue","dark faded green","dark teal-green","dark teal-cyan","dark faded cyan","dark cyan-azure","azure-azure-cyan","dark hard green","dark green-teal","dark hard teal","dark cyan-teal","dark hard cyan","cyan-cyan-azure","green","green-green-teal","teal-teal-green","teal-teal-cyan","cyan-cyan-teal","cyan","obscure weak red","obscure weak magenta","obscure dull violet","dark violet-blue","dark blue-violet","blue-blue-violet","obsure weak yellow","obscure gray","dark weak blue","dark dull blue","medium faded blue","light hard blue","obscure dull spring","dark weak green","dark weak cyan","dark dull azure","medium azure-blue","light blue-azure","dark spring-green","dark dull green","dark dull teal","dark dull cyan","medium azure-cyan","light hard azure","dark green-spring","medium faded green","medium teal-green","medium teal-cyan","medium faded cyan","light cyan-azure","green-green-spring","light hard green","light green-teal","light hard teal","light cyan-teal","light hard cyan","obscure dull red","obscure dull pink","obscure dull magenta","dark violet-magenta","dark hard violet","violet-violet-blue","obscure dull orange","dark weak red","dark weak magenta","dark dull violet","medium violet-blue","light blue-violet","obscure dull yellow","dark weak yellow","dark gray","medium weak blue","light dull blue","light faded blue","dark spring-yellow","dark dull spring","medium weak green","medium weak cyan","light dull azure","light azure-blue","dark hard spring","medium spring-green","light dull green","light dull teal","light dull cyan","light azure-cyan","spring-spring-green","light green-spring","light faded green","light teal-green","light teal-cyan","light faded cyan","dark faded red","dark pink-red","dark pink-magenta","dark faded magenta","dark magenta violet","violet-violet-magenta","dark orange-red","dark dull red","dark dull pink","dark dull magenta","medium violet-magenta","light hard violet","dark orange-yellow","dark dull orange","medium weak red","medium weak magenta","light dull violet","light violet-blue","dark faded yellow","dark dull yellow","medium weak yellow","light gray","light weak blue","pale dull blue","dark yellow-spring","medium spring-yellow","light dull spring","light weak green","light weak cyan","pale dull azure","spring-spring-yellow","light hard spring","light spring-green","pale dull green","pale dull teal","pale dull cyan","dark hard red","dark red-pink","dark hard pink","dark magenta-pink","dark hard magenta","magenta-magenta-violet","dark red-orange","medium faded red","medium pink-red","medium pink-magenta","medium faded magenta","light magenta-violet","dark hard orange","medium orange-red","light dull red","light dull pink","light dull magenta","light violet-magenta","dark yellow-orange","medium orange-yellow","light dull orange","light weak red","light weak magenta","pale dull violet","dark hard yellow","medium faded yellow","light dull yellow","light weak yellow","pale gray","pale weak blue","yellow-yellow-spring","light yellow-spring","light spring-yellow","pale dull spring","pale weak green","pale weak cyan","red","red-red-pink","pink-pink-red","pink-pink-magenta","magenta-magenta-pink","magenta","red-red-orange","light hard red","light red-pink","light hard pink","light magenta-pink","light hard magenta","orange-orange-red","light red-orange","light faded red","light pink-red","light pink-magenta","light faded magenta","orange-orange-yellow","light hard orange","light orange-red","pale dull red","pale dull pink","pale dull magenta","yellow-yellow-orang","light yellow-orange","light orange-yellow","pale dull orange","pale weak red","pale weak magenta","yellow","light hard yellow","light faded yellow","pale dull yellow","pale weak yellow","white");			// #ffffff
+                var array = ["00", "33", "66","99","CC","FF"];
+                var i = 0;
+                for (a = 0; a < 6; a++) {
+                    for (b = 0; b < 6; b++) {
+                        for (c = 0; c < 6; c++) {
+                            var color = array[a] + array[b] + array[c];
+                            var changerColor = '"'+color+'"';
+                            $("#colorPicker").append("<div onclick='changeColor("+changerColor+",true)' style='display:inline-block;width:40px;height:40px;background-color: #"+color+"' class='color'></div>");
+                            console.log(color + ' ' + colorNames[i]);
+                            i++;
+                        }
                     }
                 }
-            }
-        </script>
+                function changeColor(color,background){
+                    if(background){
+                        $("body").css("background-color","#"+color+"");
+                    }else{
+
+                    }
+                }
+            </script>
+        </div>
     </body>
 </html>
