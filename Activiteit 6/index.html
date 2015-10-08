@@ -24,7 +24,7 @@
                         for (c = 0; c < 6; c++) {
                             var color = array[a] + array[b] + array[c];
                             var changerColor = '"'+color+'"';
-                            $("#colorPicker").append("<div onclick='changeColor("+changerColor+",true)' style='display:inline-block;width:40px;height:40px;background-color: #"+color+"' class='color'></div>");
+                            $("#colorPicker").append("<div title='"+colorNames[i]+"' onclick='changeColor("+changerColor+",true)' style='display:inline-block;width:40px;height:40px;background-color: #"+color+"' class='color'></div>");
                             console.log(color + ' ' + colorNames[i]);
                             i++;
                         }
