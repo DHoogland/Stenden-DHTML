@@ -1,10 +1,16 @@
 <html>
     <head>
         <title>ColorPicker #SWAG 4000</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">
-
             <div class="col-md-8 col-md-offset-2" id="colorPicker">
                 <h2>ColorPicker #SWAG 4000</h2>
                 <p onclick="switchMethod()">Achtergrond kleur / Tekst kleur veranderen</p>
@@ -13,15 +19,7 @@
                 <input type="text" name="color" class="col-md-12 form-control" id="inputColor">
                 <input type="submit" onclick='changeColor($("#inputColor").val())' class="form-control">
             </div>
-            <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-            <!-- Optional theme -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-
-            <!-- Latest compiled and minified JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
             <script type="text/javascript">
                 var background = true;
                 var colorNames = new Array("black","weak blue","obsure dull blue","dark faded blue","dark hard blue","blue","obscure weak green","obscure weak cyan","obscure dull azure","dark azure-blue","dark blue-azure","blue-blue-azure","obscure dull green","obscure dull teal","obscure dull cyan","dark azure-cyan","dark hard azure","azure-azure-blue","dark faded green","dark teal-green","dark teal-cyan","dark faded cyan","dark cyan-azure","azure-azure-cyan","dark hard green","dark green-teal","dark hard teal","dark cyan-teal","dark hard cyan","cyan-cyan-azure","green","green-green-teal","teal-teal-green","teal-teal-cyan","cyan-cyan-teal","cyan","obscure weak red","obscure weak magenta","obscure dull violet","dark violet-blue","dark blue-violet","blue-blue-violet","obsure weak yellow","obscure gray","dark weak blue","dark dull blue","medium faded blue","light hard blue","obscure dull spring","dark weak green","dark weak cyan","dark dull azure","medium azure-blue","light blue-azure","dark spring-green","dark dull green","dark dull teal","dark dull cyan","medium azure-cyan","light hard azure","dark green-spring","medium faded green","medium teal-green","medium teal-cyan","medium faded cyan","light cyan-azure","green-green-spring","light hard green","light green-teal","light hard teal","light cyan-teal","light hard cyan","obscure dull red","obscure dull pink","obscure dull magenta","dark violet-magenta","dark hard violet","violet-violet-blue","obscure dull orange","dark weak red","dark weak magenta","dark dull violet","medium violet-blue","light blue-violet","obscure dull yellow","dark weak yellow","dark gray","medium weak blue","light dull blue","light faded blue","dark spring-yellow","dark dull spring","medium weak green","medium weak cyan","light dull azure","light azure-blue","dark hard spring","medium spring-green","light dull green","light dull teal","light dull cyan","light azure-cyan","spring-spring-green","light green-spring","light faded green","light teal-green","light teal-cyan","light faded cyan","dark faded red","dark pink-red","dark pink-magenta","dark faded magenta","dark magenta violet","violet-violet-magenta","dark orange-red","dark dull red","dark dull pink","dark dull magenta","medium violet-magenta","light hard violet","dark orange-yellow","dark dull orange","medium weak red","medium weak magenta","light dull violet","light violet-blue","dark faded yellow","dark dull yellow","medium weak yellow","light gray","light weak blue","pale dull blue","dark yellow-spring","medium spring-yellow","light dull spring","light weak green","light weak cyan","pale dull azure","spring-spring-yellow","light hard spring","light spring-green","pale dull green","pale dull teal","pale dull cyan","dark hard red","dark red-pink","dark hard pink","dark magenta-pink","dark hard magenta","magenta-magenta-violet","dark red-orange","medium faded red","medium pink-red","medium pink-magenta","medium faded magenta","light magenta-violet","dark hard orange","medium orange-red","light dull red","light dull pink","light dull magenta","light violet-magenta","dark yellow-orange","medium orange-yellow","light dull orange","light weak red","light weak magenta","pale dull violet","dark hard yellow","medium faded yellow","light dull yellow","light weak yellow","pale gray","pale weak blue","yellow-yellow-spring","light yellow-spring","light spring-yellow","pale dull spring","pale weak green","pale weak cyan","red","red-red-pink","pink-pink-red","pink-pink-magenta","magenta-magenta-pink","magenta","red-red-orange","light hard red","light red-pink","light hard pink","light magenta-pink","light hard magenta","orange-orange-red","light red-orange","light faded red","light pink-red","light pink-magenta","light faded magenta","orange-orange-yellow","light hard orange","light orange-red","pale dull red","pale dull pink","pale dull magenta","yellow-yellow-orang","light yellow-orange","light orange-yellow","pale dull orange","pale weak red","pale weak magenta","yellow","light hard yellow","light faded yellow","pale dull yellow","pale weak yellow","white");			// #ffffff
